@@ -11,7 +11,7 @@ jobs:
   include:
     - env: JOB_NAME="compile"
       script: sbt compile
-    - env: JOB_NAME="formatting"
+    - env: JOB_NAME="test"
       script: sbt test
     - stage: release
       script: sbt ci-release
