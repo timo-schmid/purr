@@ -2,12 +2,11 @@ package ch.timo_schmid.sbt.purr
 
 import sbt._
 import sbt.Keys.libraryDependencies
-import Syntax._
-import ch.timo_schmid.sbt.purr.Keys._
+import ch.timo_schmid.sbt.purr.AutoImport._
 
 object PurrPlugin extends AutoPlugin {
 
-  val autoImport: Keys.type = Keys
+  val autoImport: AutoImport.type = AutoImport
 
   override def projectSettings: Seq[Def.Setting[_]] = {
     Seq(

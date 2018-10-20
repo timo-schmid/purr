@@ -2,7 +2,7 @@ package ch.timo_schmid.sbt.purr
 
 import sbt.settingKey
 
-object Keys {
+trait Keys {
 
   lazy val catsVersion             = settingKey[String](versionDescription("cats"))
   lazy val catsEffectVersion       = settingKey[String](versionDescription("cats-effect"))

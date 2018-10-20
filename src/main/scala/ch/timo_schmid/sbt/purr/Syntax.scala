@@ -4,7 +4,7 @@ import sbt.ModuleID
 
 import scala.language.implicitConversions
 
-object Syntax {
+trait Syntax {
 
   implicit def toModuleIDOps(moduleID: ModuleID): ModuleIDOps = new ModuleIDOps(moduleID)
 
