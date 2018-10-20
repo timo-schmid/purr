@@ -1,5 +1,6 @@
 # sbt-purr
 
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/ch.timo-schmid/sbt-purr/badge.svg)](https://search.maven.org/search?q=a:sbt-purr)
 [![Build Status](https://api.travis-ci.org/timo-schmid/purr.svg?branch=master)](https://travis-ci.org/timo-schmid/purr)
 [![Code Coverage](https://api.codacy.com/project/badge/Grade/dda749696ed34db0a417a4e4567c1522)](https://www.codacy.com/app/timo-schmid/purr?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=timo-schmid/purr&amp;utm_campaign=Badge_Grade)
 
@@ -7,11 +8,11 @@
 
 Purr is an sbt-plugin that helps me add a few libraries to a project I often use, namely:
 
--   cats, cats-effect
--   fs2
--   http4s
--   circe
--   logback, log4cats
+-   [cats](https://typelevel.org/cats/), [cats-effect](https://typelevel.org/cats-effect/)
+-   [fs2](http://fs2.io/)
+-   [http4s](https://http4s.org/)
+-   [circe](https://circe.github.io/circe/)
+-   [logback](https://logback.qos.ch/), [log4cats](https://christopherdavenport.github.io/log4cats/)
 
 By adding this plugin, you automatically pull in those libraries with compatible versions.
 
@@ -20,7 +21,7 @@ By adding this plugin, you automatically pull in those libraries with compatible
 Add the purr plugin to **plugins.sbt**:
 
 ```scala
-addSbtPlugin("ch.timo-schmid" % "sbt-purr" % "{{ version }}")
+addSbtPlugin("ch.timo-schmid" % "sbt-purr" % "{ latest version }")
 ```
 
 In your **build.sbt**, enable the purr plugin for your webserver project:
@@ -60,7 +61,7 @@ Seq(
 ## Customizing versions
 
 You can customize each of the versions by setting the keys in
-[Keys.scala](src/main/scala/ch/timo_schmid/sbt/purr/AutoImport.scala).
+[Keys.scala](plugin/src/main/scala/ch/timo_schmid/sbt/purr/Keys.scala).
 An example: At the time of writing this, the latest version of http4s used by purr is "0.19.0-M4",
 but now lets say "0.19.0" is released, and you want to update. You don't have to wait for it to change -
 just set the **http4sVersion** setting to "0.19.0" (or whatever version you want).
