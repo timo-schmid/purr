@@ -7,7 +7,7 @@
 
 Purr is an sbt-plugin that helps me add a few libraries to a project I often use, namely:
 
--   cats, cats-effect, log4cats
+-   cats, cats-effect
 -   fs2
 -   http4s
 -   circe
