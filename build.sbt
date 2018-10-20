@@ -1,6 +1,7 @@
+import sbt.Keys.scalacOptions
+
 inThisBuild(
   List(
-    name := "sbt-purr",
     scalaVersion := "2.12.7",
     organization := "ch.timo-schmid",
     homepage := Some(url("https://github.com/timo-schmid/sbt-purr")),
@@ -17,10 +18,13 @@ inThisBuild(
   )
 )
 
-sbtPlugin := true
-scalacOptions ++= Seq(
-  "-feature",
-  "-language:higherKinds",
-  "-language:implicitConversions",
-  "-language:postfixOps"
+val plugin  = (project in file("plugin")).settings(
+  moduleName := "sbt-purr",
+  sbtPlugin := true,
+  scalacOptions ++= Seq(
+    "-feature",
+    "-language:higherKinds",
+    "-language:implicitConversions",
+    "-language:postfixOps"
+  )
 )
