@@ -18,7 +18,7 @@ inThisBuild(
   )
 )
 
-val plugin  = (project in file("plugin")).settings(
+val `sbt-purr`  = (project in file("plugin")).settings(
   moduleName := "sbt-purr",
   sbtPlugin := true,
   scalacOptions ++= Seq(
@@ -28,3 +28,7 @@ val plugin  = (project in file("plugin")).settings(
     "-language:postfixOps"
   )
 )
+
+lazy val `purr` = (project in file(".")).settings(
+  skip in publish := true,
+).aggregate(`sbt-purr`)
