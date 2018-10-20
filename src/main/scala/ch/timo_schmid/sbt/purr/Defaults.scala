@@ -1,6 +1,6 @@
 package ch.timo_schmid.sbt.purr
 
-object Defaults {
+private [purr] object Defaults {
 
   object Versions {
 
