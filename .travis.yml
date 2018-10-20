@@ -14,7 +14,7 @@ jobs:
     - env: JOB_NAME="test"
       script: sbt test
     - stage: release
-      script: sbt -D sbt.gigahorse.enabled=false ci-release
+      script: sbt -Dsbt.gigahorse.enabled=false ci-release
 
 
 cache:
