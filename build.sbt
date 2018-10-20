@@ -5,6 +5,7 @@ inThisBuild(
     organization := "ch.timo-schmid",
     homepage := Some(url("https://github.com/timo-schmid/sbt-purr")),
     licenses := List("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
+    resolvers += Resolver.sonatypeRepo("releases"),
     developers := List(
       Developer(
         "timo-schmid",

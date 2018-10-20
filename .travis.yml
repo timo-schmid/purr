@@ -1,4 +1,5 @@
 language: scala
+
 jdk:
 - oraclejdk8
 
@@ -9,13 +10,10 @@ stages:
 
 jobs:
   include:
-    - env: JOB_NAME="compile"
-      script: sbt compile
     - env: JOB_NAME="test"
       script: sbt test
     - stage: release
       script: sbt ci-release
-
 
 cache:
   directories:
